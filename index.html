@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://docs.opencv.org/4.5.0/opencv.js"></script> <!-- Biblioteca para processamento de Imagem -->
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script> <!-- Biblioteca para leitura de QR-Code -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script> <!-- Biblioteca para OCR -->
+
+    <script src="script.js" defer></script>
+
+    <title>Hello OpenCV.js</title>
+
+</head>
+<body>
+
+    <h2>Hello OpenCV.js</h2>
+    <div class="caption">
+        <p>Imagem:</p>
+        <input type="file" id="fileInput" name="file" />
+    </div>
+    <button id="enviarProce">Processar</button>
+    <div class="imageArea">
+        <div class="input">
+            <p>Entrada</p>
+            <img class="inputCanvas" id="inputCanvas" src="" alt="Nenhuma imagem carregada para processar." />
+        </div>
+        <div class="output">
+            <p>Saída</p>
+            <canvas class="outputCanvas" id="outputCanvas"></canvas>
+        </div>
+    </div>
+
+</body>
+</html>
