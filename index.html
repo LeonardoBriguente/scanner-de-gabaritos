@@ -7,6 +7,8 @@
     <script async src="https://docs.opencv.org/4.5.0/opencv.js"></script> <!-- Biblioteca para processamento de Imagem -->
     <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script> <!-- Biblioteca para leitura de QR-Code -->
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script> <!-- Biblioteca para OCR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script> <!-- Biblioteca para ferramenta de recorte -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"> <!-- CSS do Cropper.JS -->
 
     <script src="script.js" defer></script>
 
@@ -19,12 +21,14 @@
     <div class="caption">
         <p>Imagem:</p>
         <input type="file" id="fileInput" name="file" />
+        <button id="reset">Limpar</button>
+        <p id="conteudo"></p>
     </div>
-    <button id="enviarProce">Processar</button>
     <div class="imageArea">
         <div class="input">
             <p>Entrada</p>
             <img class="inputCanvas" id="inputCanvas" src="" alt="Nenhuma imagem carregada para processar." />
+            <button id="cropButton">Processar</button>
         </div>
         <div class="output">
             <p>Saída</p>
